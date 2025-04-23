@@ -52,3 +52,7 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+.vs/gestore_casino/CopilotIndices/17.13.431.34963/CodeChunks.db
+.vs/gestore_casino/CopilotIndices/17.13.431.34963/SemanticSymbols.db
+.vs/slnx.sqlite
+.vs/gestore_casino/FileContentIndex/a689831c-80fc-4f6a-8b11-699857eddb28.vsidx
