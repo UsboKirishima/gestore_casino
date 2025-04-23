@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsCasino", "WinFormsCasino.csproj", "{E82C315F-CF0F-467C-9B4E-8538E53BEE7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCasino", "..\ClassLibraryCasino\ClassLibraryCasino.csproj", "{0B679DBB-C3C2-659E-18B0-FEFD0CA45391}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E82C315F-CF0F-467C-9B4E-8538E53BEE7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82C315F-CF0F-467C-9B4E-8538E53BEE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82C315F-CF0F-467C-9B4E-8538E53BEE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82C315F-CF0F-467C-9B4E-8538E53BEE7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B679DBB-C3C2-659E-18B0-FEFD0CA45391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B679DBB-C3C2-659E-18B0-FEFD0CA45391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B679DBB-C3C2-659E-18B0-FEFD0CA45391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B679DBB-C3C2-659E-18B0-FEFD0CA45391}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0BD3474-B513-4768-9835-3430AE32D77D}
+	EndGlobalSection
+EndGlobal
