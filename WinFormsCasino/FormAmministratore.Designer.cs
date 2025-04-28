@@ -38,18 +38,20 @@
             // 
             // btTurni
             // 
-            btTurni.Location = new Point(32, 82);
+            btTurni.Location = new Point(218, 96);
+            btTurni.Margin = new Padding(2);
             btTurni.Name = "btTurni";
-            btTurni.Size = new Size(267, 34);
+            btTurni.Size = new Size(187, 34);
             btTurni.TabIndex = 1;
             btTurni.Text = "Gestione Turni";
             btTurni.UseVisualStyleBackColor = true;
             // 
             // btCassa
             // 
-            btCassa.Location = new Point(465, 82);
+            btCassa.Location = new Point(218, 134);
+            btCassa.Margin = new Padding(2);
             btCassa.Name = "btCassa";
-            btCassa.Size = new Size(267, 34);
+            btCassa.Size = new Size(187, 34);
             btCassa.TabIndex = 2;
             btCassa.Text = "Gestione cassa";
             btCassa.UseVisualStyleBackColor = true;
@@ -57,27 +59,30 @@
             // 
             // btEntrateUscite
             // 
-            btEntrateUscite.Location = new Point(32, 232);
+            btEntrateUscite.Location = new Point(218, 172);
+            btEntrateUscite.Margin = new Padding(2);
             btEntrateUscite.Name = "btEntrateUscite";
-            btEntrateUscite.Size = new Size(267, 34);
+            btEntrateUscite.Size = new Size(187, 34);
             btEntrateUscite.TabIndex = 3;
             btEntrateUscite.Text = "Gestione entrate/uscite";
             btEntrateUscite.UseVisualStyleBackColor = true;
             // 
             // btTavoli
             // 
-            btTavoli.Location = new Point(465, 232);
+            btTavoli.Location = new Point(218, 210);
+            btTavoli.Margin = new Padding(2);
             btTavoli.Name = "btTavoli";
-            btTavoli.Size = new Size(267, 34);
+            btTavoli.Size = new Size(187, 34);
             btTavoli.TabIndex = 4;
             btTavoli.Text = "Gestione Tavoli";
             btTavoli.UseVisualStyleBackColor = true;
             // 
             // btLogout
             // 
-            btLogout.Location = new Point(320, 371);
+            btLogout.Location = new Point(555, 11);
+            btLogout.Margin = new Padding(2);
             btLogout.Name = "btLogout";
-            btLogout.Size = new Size(112, 34);
+            btLogout.Size = new Size(78, 25);
             btLogout.TabIndex = 5;
             btLogout.Text = "Logout";
             btLogout.UseVisualStyleBackColor = true;
@@ -85,22 +90,25 @@
             // 
             // loginAmministratore1
             // 
-            loginAmministratore1.Location = new Point(-1, 1);
+            loginAmministratore1.Location = new Point(10, 10);
+            loginAmministratore1.Margin = new Padding(1);
             loginAmministratore1.Name = "loginAmministratore1";
-            loginAmministratore1.Size = new Size(809, 456);
+            loginAmministratore1.Size = new Size(623, 356);
             loginAmministratore1.TabIndex = 6;
+            loginAmministratore1.Load += loginAmministratore1_Load;
             // 
             // FormAmministratore
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(643, 376);
             Controls.Add(loginAmministratore1);
             Controls.Add(btLogout);
             Controls.Add(btTavoli);
             Controls.Add(btEntrateUscite);
             Controls.Add(btCassa);
             Controls.Add(btTurni);
+            Margin = new Padding(2);
             Name = "FormAmministratore";
             Text = "Pannello Amministratore";
             ResumeLayout(false);

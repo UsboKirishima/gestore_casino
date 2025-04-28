@@ -34,13 +34,16 @@
             tbUsername = new TextBox();
             tbPassword = new TextBox();
             lbErrore = new Label();
+            label1 = new Label();
+            skipBtn = new Button();
             SuspendLayout();
             // 
             // btLogin
             // 
-            btLogin.Location = new Point(142, 228);
+            btLogin.Location = new Point(196, 228);
+            btLogin.Margin = new Padding(2);
             btLogin.Name = "btLogin";
-            btLogin.Size = new Size(112, 34);
+            btLogin.Size = new Size(198, 25);
             btLogin.TabIndex = 0;
             btLogin.Text = "Login";
             btLogin.UseVisualStyleBackColor = true;
@@ -49,55 +52,86 @@
             // lbUsername
             // 
             lbUsername.AutoSize = true;
-            lbUsername.Location = new Point(50, 76);
+            lbUsername.Location = new Point(205, 105);
+            lbUsername.Margin = new Padding(2, 0, 2, 0);
             lbUsername.Name = "lbUsername";
-            lbUsername.Size = new Size(91, 25);
+            lbUsername.Size = new Size(60, 15);
             lbUsername.TabIndex = 1;
             lbUsername.Text = "Username";
             // 
             // lbPassword
             // 
             lbPassword.AutoSize = true;
-            lbPassword.Location = new Point(50, 153);
+            lbPassword.Location = new Point(205, 165);
+            lbPassword.Margin = new Padding(2, 0, 2, 0);
             lbPassword.Name = "lbPassword";
-            lbPassword.Size = new Size(87, 25);
+            lbPassword.Size = new Size(57, 15);
             lbPassword.TabIndex = 2;
             lbPassword.Text = "Password";
             // 
             // tbUsername
             // 
-            tbUsername.Location = new Point(235, 76);
+            tbUsername.Location = new Point(196, 127);
+            tbUsername.Margin = new Padding(2);
             tbUsername.Name = "tbUsername";
-            tbUsername.Size = new Size(150, 31);
+            tbUsername.Size = new Size(198, 23);
             tbUsername.TabIndex = 3;
             // 
             // tbPassword
             // 
-            tbPassword.Location = new Point(235, 153);
+            tbPassword.Location = new Point(196, 182);
+            tbPassword.Margin = new Padding(2);
             tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(150, 31);
+            tbPassword.PasswordChar = '*';
+            tbPassword.Size = new Size(198, 23);
             tbPassword.TabIndex = 4;
+            tbPassword.TextChanged += tbPassword_TextChanged;
             // 
             // lbErrore
             // 
             lbErrore.AutoSize = true;
-            lbErrore.Location = new Point(175, 298);
+            lbErrore.Location = new Point(205, 238);
+            lbErrore.Margin = new Padding(2, 0, 2, 0);
             lbErrore.Name = "lbErrore";
-            lbErrore.Size = new Size(0, 25);
+            lbErrore.Size = new Size(0, 15);
             lbErrore.TabIndex = 5;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(128, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(357, 65);
+            label1.TabIndex = 6;
+            label1.Text = "Gestore Casinò";
+            label1.Click += label1_Click;
+            // 
+            // skipBtn
+            // 
+            skipBtn.Location = new Point(532, 320);
+            skipBtn.Name = "skipBtn";
+            skipBtn.Size = new Size(75, 23);
+            skipBtn.TabIndex = 7;
+            skipBtn.Text = "Skip";
+            skipBtn.UseVisualStyleBackColor = true;
+            skipBtn.Click += skipBtn_Click;
             // 
             // LoginAmministratore
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(skipBtn);
+            Controls.Add(label1);
             Controls.Add(lbErrore);
             Controls.Add(tbPassword);
             Controls.Add(tbUsername);
             Controls.Add(lbPassword);
             Controls.Add(lbUsername);
             Controls.Add(btLogin);
+            Margin = new Padding(2);
             Name = "LoginAmministratore";
-            Size = new Size(438, 360);
+            Size = new Size(623, 356);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -110,5 +144,7 @@
         private TextBox tbUsername;
         private TextBox tbPassword;
         private Label lbErrore;
+        private Label label1;
+        private Button skipBtn;
     }
 }

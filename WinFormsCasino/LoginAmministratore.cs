@@ -13,8 +13,9 @@ namespace WinFormsCasino
 {
     public partial class LoginAmministratore : UserControl
     {
-        private static string username="admin";
-        private static string password="CadelGo!";
+        private readonly string username = "admin";
+        private readonly string password = "CadelGo!";
+
         private static Amministratore? amministratore;
         public LoginAmministratore()
         {
@@ -24,16 +25,35 @@ namespace WinFormsCasino
         private void btLogin_Click(object sender, EventArgs e)
         {
             Amministratore utente = new Amministratore("", "", 0, tbUsername.Text, tbPassword.Text);
-            if(utente.Login(username, password))
+            if (utente.Login(username, password))
             {
                 this.Visible = false;
                 tbPassword.Text = "";
                 tbUsername.Text = "";
-                lbErrore.Text = "";
             }
             else
             {
-                lbErrore.Text = "Credenziali errate!";
+                MessageBox.Show("Authentication Error!", "Invalid Password",
+                    MessageBoxButtons.OK);
+            }
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void skipBtn_Click(object sender, EventArgs e)
+        {
+            Amministratore utente = new Amministratore("", "", 0, username, password);
+            if (utente.Login(username, password))
+            {
+                this.Visible = false;
             }
         }
     }

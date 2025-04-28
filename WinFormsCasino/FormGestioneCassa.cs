@@ -14,19 +14,25 @@ namespace WinFormsCasino
     public partial class FormGestioneCassa : Form
     {
         private Amministratore amministratore;
-        private static Cassa? cassa = Cassa.GetData();
+        private static Cassa cassa = Cassa.GetData();
         public FormGestioneCassa(Amministratore a)
         {
             amministratore = a;
             InitializeComponent();
-            dgvCassa.DataSource = new BindingList<Cassa>() {cassa};
-            dgvTransazione.DataSource = TransazioneDenaro.GetData();
+            dgvCassa.DataSource = new BindingList<Cassa>() {
+                cassa
+            };
+
+            dgvTransazione.DataSource = Gestore.GetTransazioni();
         }
 
         private void btEseguiTransazione_Click(object sender, EventArgs e)
         {
-            amministratore.EseguiTransazione(Convert.ToInt32(tbTransazione.Text)*2, Convert.ToInt32(tbTransazione.Text));
-            //non funziona non capisco perchè :)
+            // FIX: La transazione accetta parametri double, venivano convertiti in Int32
+            amministratore.EseguiTransazione(Convert.ToDouble(tbTransazione.Text) * 2, Convert.ToDouble(tbTransazione.Text));
+            
+            dgvTransazione.DataSource = null;
+            dgvTransazione.DataSource = Gestore.GetTransazioni();
         }
     }
 }

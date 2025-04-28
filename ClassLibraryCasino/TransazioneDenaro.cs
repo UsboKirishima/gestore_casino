@@ -19,6 +19,8 @@ namespace ClassLibraryCasino
             this.Data = DateTime.Now;
             this.Fiches = fiches;
             this.Contanti = contanti;
+
+            AddTransazione(this);
         }
 
         public DateTime Data { get => data; set => data = value; }
@@ -35,10 +37,20 @@ namespace ClassLibraryCasino
                 new TransazioneDenaro(400, 200)
             };
         }
-        
+
+        public static void AddTransazione(TransazioneDenaro transazione)
+        {
+            if (transazioni == null)
+                transazioni = new BindingList<TransazioneDenaro>();
+
+            transazioni.Add(transazione);
+        }
+
         public static BindingList<TransazioneDenaro> GetData()
         {
-            if(transazioni == null) transazioni=TransazioneDenaro.GetSampleData(); 
+            if(transazioni == null) 
+                transazioni = TransazioneDenaro.GetSampleData(); 
+
             return transazioni;
         }
     }

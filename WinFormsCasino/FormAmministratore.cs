@@ -18,8 +18,13 @@ namespace WinFormsCasino
 
         private void btCassa_Click(object sender, EventArgs e)
         {
-            FormGestioneCassa form= new FormGestioneCassa(amministratore);
+            FormGestioneCassa form = new FormGestioneCassa(amministratore);
             form.Visible = true;
+        }
+
+        private void loginAmministratore1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

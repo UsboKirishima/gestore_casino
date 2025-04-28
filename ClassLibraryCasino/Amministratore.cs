@@ -25,6 +25,5 @@
         }
         // Metodi per la gestione delle casse, turni, etc.
 
-
     }
 }
