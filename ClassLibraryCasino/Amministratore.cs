@@ -17,6 +17,12 @@
             return this.username.Equals(username) && this.password.Equals(password);
         }
 
+        public void EseguiTransazione(double fiches, double denaro)
+        {
+            TransazioneDenaro transazione = new TransazioneDenaro(fiches, denaro);
+            Cassa.GetData().Fiches-=fiches;
+            Cassa.GetData().Contanti += denaro;
+        }
         // Metodi per la gestione delle casse, turni, etc.
 
 

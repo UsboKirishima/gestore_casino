@@ -9,6 +9,7 @@ namespace ClassLibraryCasino
 {
     public class TransazioneDenaro
     {
+        private static BindingList<TransazioneDenaro> transazioni;
         private DateTime data;
         private double fiches;
         private double contanti;
@@ -24,7 +25,7 @@ namespace ClassLibraryCasino
         public double Fiches { get => fiches; set => fiches = value; }
         public double Contanti { get => contanti; set => contanti = value; }
 
-        public BindingList<TransazioneDenaro> GetSampleData()
+        private static BindingList<TransazioneDenaro> GetSampleData()
         {
             return new BindingList<TransazioneDenaro>
             {
@@ -33,6 +34,12 @@ namespace ClassLibraryCasino
                 new TransazioneDenaro(300, 150),
                 new TransazioneDenaro(400, 200)
             };
+        }
+        
+        public static BindingList<TransazioneDenaro> GetData()
+        {
+            if(transazioni == null) transazioni=TransazioneDenaro.GetSampleData(); 
+            return transazioni;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,10 @@ namespace ClassLibraryCasino
         {
             this.Fiches -= amount;
             this.Contanti += amount;
+        }
+        public static Cassa GetData()
+        {
+            return new Cassa(10000, 10000);
         }
 
         // Getters and Setters
