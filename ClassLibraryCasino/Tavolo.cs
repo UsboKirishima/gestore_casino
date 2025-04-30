@@ -15,6 +15,8 @@ namespace ClassLibraryCasino
         private double puntataMin;
         private double puntataMax;
 
+        private static BindingList<Tavolo> tavoli;
+
         public Tavolo(String gioco, int nGiocatori, bool croupier, double puntataMin, double puntataMax)
         {
             this.Gioco = gioco;
@@ -41,6 +43,17 @@ namespace ClassLibraryCasino
                 new Tavolo("Poker", 6, false, 20, 2000),
                 new Tavolo("Baccarat", 9, true, 50, 5000)
             };
+        }
+
+        public static BindingList<Tavolo> GetData()
+        {
+            if (tavoli == null)
+            {
+                tavoli = new BindingList<Tavolo>();
+                tavoli.Add(new Tavolo("Roulette", 8, true, 5, 1000));
+                tavoli.Add(new Tavolo("Blackjack", 7, true, 10, 500));
+            }
+            return tavoli;
         }
     }
 }

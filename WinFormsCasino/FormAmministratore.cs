@@ -26,5 +26,21 @@ namespace WinFormsCasino
         {
 
         }
+
+        private void btTurni_Click(object sender, EventArgs e)
+        {
+            FormGestioneTurni formTurni = new FormGestioneTurni();
+            formTurni.ShowDialog();
+        }
+
+        private void btEntrateUscite_Click(object sender, EventArgs e)
+        {
+            new FormGestioneTransazioni().ShowDialog();
+        }
+
+        private void btTavoli_Click(object sender, EventArgs e)
+        {
+            new FormGestioneTavoli().ShowDialog();
+        }
     }
 }

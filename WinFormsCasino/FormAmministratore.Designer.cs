@@ -45,6 +45,7 @@
             btTurni.TabIndex = 1;
             btTurni.Text = "Gestione Turni";
             btTurni.UseVisualStyleBackColor = true;
+            btTurni.Click += btTurni_Click;
             // 
             // btCassa
             // 
@@ -66,6 +67,7 @@
             btEntrateUscite.TabIndex = 3;
             btEntrateUscite.Text = "Gestione entrate/uscite";
             btEntrateUscite.UseVisualStyleBackColor = true;
+            btEntrateUscite.Click += btEntrateUscite_Click;
             // 
             // btTavoli
             // 
@@ -76,6 +78,7 @@
             btTavoli.TabIndex = 4;
             btTavoli.Text = "Gestione Tavoli";
             btTavoli.UseVisualStyleBackColor = true;
+            btTavoli.Click += btTavoli_Click;
             // 
             // btLogout
             // 

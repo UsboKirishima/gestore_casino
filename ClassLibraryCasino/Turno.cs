@@ -9,6 +9,7 @@ namespace ClassLibraryCasino
 {
     public class Turno
     {
+        private static BindingList<Turno> turni;
         private DateTime dataInizio;
         private DateTime dataFine;
 
@@ -16,6 +17,7 @@ namespace ClassLibraryCasino
         {
             this.DataInizio = dataInizio;
             this.DataFine = dataFine;
+            AddTurno(this);
         }
 
         public DateTime DataInizio { get => dataInizio; set => dataInizio = value; }
@@ -33,5 +35,22 @@ namespace ClassLibraryCasino
                 new Turno(DateTime.Now.AddHours(-8), DateTime.Now.AddHours(-6))
             };
         }
+
+        private static void AddTurno(Turno turno)
+        {
+            if (turni == null)
+                turni = new BindingList<Turno>();
+
+            turni.Add(turno);
+        }
+
+        public static BindingList<Turno> GetData()
+        {
+            if (turni == null)
+                turni = new BindingList<Turno>();
+
+            return turni;
+        }
+
     }
 }
